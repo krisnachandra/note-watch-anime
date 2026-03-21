@@ -48,3 +48,20 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+Database Schema (Supabase)
+The app will save anime to a watch_list table and checked episodes to watched_episodes table.
+
+sql
+CREATE TABLE watch_list (
+id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+anime_id bigint UNIQUE NOT NULL,
+title text NOT NULL,
+cover_image text,
+total_episodes int NOT NULL,
+status text NOT NULL DEFAULT 'ON_PROGRESS'
+);
+CREATE TABLE watched_episodes (
+id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+watch_list_id uuid REFERENCES watch_list(id) ON DELETE CASCADE,
+episode_number int NOT NULL,

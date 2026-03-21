@@ -1,35 +1,64 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { TouchableOpacity, StyleSheet } from 'react-native';
+import { Home, List, PlaySquare, Sun, Moon } from 'lucide-react-native';
+import { useTheme } from '@/components/ThemeProvider';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const { theme, toggleTheme, colors } = useTheme();
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textSecondary,
+        tabBarStyle: {
+          backgroundColor: colors.surface,
+          borderTopColor: colors.border,
+        },
+        headerStyle: {
+          backgroundColor: colors.surface,
+          shadowColor: 'transparent',
+          elevation: 0,
+        },
+        headerTintColor: colors.text,
+        headerRight: () => (
+          <TouchableOpacity onPress={toggleTheme} style={styles.headerIcon}>
+            {theme === 'dark' ? (
+              <Sun color={colors.text} size={24} />
+            ) : (
+              <Moon color={colors.text} size={24} />
+            )}
+          </TouchableOpacity>
+        ),
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Home color={color} size={24} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="list"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Anime List',
+          tabBarIcon: ({ color }) => <List color={color} size={24} />,
+        }}
+      />
+      <Tabs.Screen
+        name="watch"
+        options={{
+          title: 'My Watch',
+          tabBarIcon: ({ color }) => <PlaySquare color={color} size={24} />,
         }}
       />
     </Tabs>
   );
 }
+
+const styles = StyleSheet.create({
+  headerIcon: {
+    marginRight: 16,
+  },
+});
