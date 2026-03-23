@@ -23,15 +23,16 @@ Here is a professionally structured `README.md` for your repository. It uses a c
 ---
 
 ## 📸 Preview
-
-### Desktop Dashboard
-![Desktop Preview](https://via.placeholder.com/800x450.png?text=Anime+Watchlist+Dashboard+Preview)
-*A clean and intuitive interface to manage your entire collection at a glance.*
+<img width="372" height="588" alt="Screenshot 2026-03-23 at 09 48 08" src="https://github.com/user-attachments/assets/cbaf75f7-4b76-470f-a0bc-ff307c3668d1" />
+<img width="382" height="676" alt="Screenshot 2026-03-23 at 09 48 38" src="https://github.com/user-attachments/assets/57e8a1d2-181c-4310-8d9a-2a229066deb0" />
+<img width="375" height="670" alt="Screenshot 2026-03-23 at 09 48 48" src="https://github.com/user-attachments/assets/db1a03a1-30d8-4edb-bc18-c4462efe2609" />
+<img width="380" height="673" alt="Screenshot 2026-03-23 at 09 49 01" src="https://github.com/user-attachments/assets/b330e116-ef3c-4faa-9f83-cc5a911d20fc" />
+<img width="381" height="604" alt="Screenshot 2026-03-23 at 09 49 21" src="https://github.com/user-attachments/assets/90e5913a-2daf-4739-89c2-4833deb7a72e" />
+<img width="376" height="669" alt="Screenshot 2026-03-23 at 10 01 28" src="https://github.com/user-attachments/assets/46a77143-5b87-412f-8c5b-f5089f024fd0" />
 
 ### Mobile View
-<p align="center">
-  <img src="[https://via.placeholder.com/300x600.png?text=Mobile+App+UI](https://via.placeholder.com/300x600.png?text=Mobile+App+UI)" alt="Mobile Preview" width="300">
-</p>
+
+
 *Track your anime on the go with a mobile-friendly layout.*
 
 ---
