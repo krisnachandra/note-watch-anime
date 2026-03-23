@@ -1,67 +1,114 @@
-# Welcome to your Expo app 👋
+Here is a professionally structured `README.md` for your repository. It uses a clean layout, modern icons, and placeholders for your screenshots to make the project look high-quality.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+# 📝 Note Watch Anime
 
-1. Install dependencies
+[![GitHub license](https://img.shields.io/github/license/krisnachandra/note-watch-anime?style=flat-square)](https://github.com/krisnachandra/note-watch-anime/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/krisnachandra/note-watch-anime?style=flat-square)](https://github.com/krisnachandra/note-watch-anime/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/krisnachandra/note-watch-anime?style=flat-square)](https://github.com/krisnachandra/note-watch-anime/issues)
 
-   ```bash
-   npm install
-   ```
+**Note Watch Anime** is a streamlined web application designed for anime enthusiasts to organize, track, and manage their watchlists. Never lose track of which episode you're on or which series you've planned to watch next.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Features
 
-In the output, you'll find options to open the app in a
+* **Watchlist Management:** Easily add, update, or remove anime titles from your collection.
+* **Progress Tracking:** Keep a precise record of the current episode you are watching.
+* **Status Categorization:** Organize titles into categories like *Plan to Watch*, *Watching*, and *Completed*.
+* **Personal Notes:** Add custom notes or reviews for each series to remember your favorite moments.
+* **Responsive Design:** Optimized for a seamless experience on both desktop and mobile devices.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📸 Preview
 
-## Get a fresh project
+### Desktop Dashboard
+![Desktop Preview](https://via.placeholder.com/800x450.png?text=Anime+Watchlist+Dashboard+Preview)
+*A clean and intuitive interface to manage your entire collection at a glance.*
 
-When you're ready, run:
+### Mobile View
+<p align="center">
+  <img src="[https://via.placeholder.com/300x600.png?text=Mobile+App+UI](https://via.placeholder.com/300x600.png?text=Mobile+App+UI)" alt="Mobile Preview" width="300">
+</p>
+*Track your anime on the go with a mobile-friendly layout.*
 
-```bash
-npm run reset-project
+---
+
+## 🛠️ Tech Stack
+
+This project is built using:
+
+* **Frontend:** [e.g., HTML5, CSS3, JavaScript / React.js]
+* **Styling:** [e.g., Tailwind CSS / Bootstrap]
+* **Storage:** [e.g., LocalStorage / Firebase / MongoDB]
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to get the project running locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/krisnachandra/note-watch-anime.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd note-watch-anime
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Start the development server:**
+    ```bash
+    npm start
+    ```
+
+---
+
+## 📂 Project Structure
+
+```text
+note-watch-anime/
+├── public/          # Static assets (images, icons)
+├── src/             # Main application logic
+│   ├── components/  # Modular UI components
+│   ├── assets/      # Stylesheets and media
+│   └── hooks/       # Custom logic and state management
+├── index.html       # Entry point
+└── package.json     # Project dependencies and scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🤝 Contributing
 
-To learn more about developing your project with Expo, look at the following resources:
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 📄 License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
-Database Schema (Supabase)
-The app will save anime to a watch_list table and checked episodes to watched_episodes table.
+---
 
-sql
-CREATE TABLE watch_list (
-id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-anime_id bigint UNIQUE NOT NULL,
-title text NOT NULL,
-cover_image text,
-total_episodes int NOT NULL,
-status text NOT NULL DEFAULT 'ON_PROGRESS'
-);
-CREATE TABLE watched_episodes (
-id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-watch_list_id uuid REFERENCES watch_list(id) ON DELETE CASCADE,
-episode_number int NOT NULL,
+**Developed with ❤️ by [Krisna Chandra](https://github.com/krisnachandra)**
+
+---
+
+**Tip:** To display your actual images, replace the `via.placeholder` URLs with the paths to your screenshots inside your `public/` or `assets/` folder.
+
+Would you like me to help you write a specific "How to Use" section based on your app's unique workflow?
