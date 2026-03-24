@@ -41,8 +41,7 @@ Here is a professionally structured `README.md` for your repository. It uses a c
 
 This project is built using:
 
-* **Frontend:** React Native
-* **Styling:** CSS
+* **Frontend:** Expo Dev
 * **Storage:** Supabase
 
 ---
