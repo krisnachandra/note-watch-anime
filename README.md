@@ -41,11 +41,30 @@ Here is a professionally structured `README.md` for your repository. It uses a c
 
 This project is built using:
 
-* **Frontend:** [e.g., HTML5, CSS3, JavaScript / React.js]
-* **Styling:** [e.g., Tailwind CSS / Bootstrap]
-* **Storage:** [e.g., LocalStorage / Firebase / MongoDB]
+* **Frontend:** React Native
+* **Styling:** CSS
+* **Storage:** Supabase
 
 ---
+
+## ▶️ Run from sql editor supabase
+```
+CREATE TABLE watch_list (
+  id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+  anime_id bigint UNIQUE NOT NULL,
+  title text NOT NULL,
+  cover_image text,
+  total_episodes int NOT NULL,
+  status text NOT NULL DEFAULT 'ON_PROGRESS'
+);
+
+CREATE TABLE watched_episodes (
+  id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+  watch_list_id uuid REFERENCES watch_list(id) ON DELETE CASCADE,
+  episode_number int NOT NULL,
+  UNIQUE(watch_list_id, episode_number)
+);
+```
 
 ## ⚙️ Installation & Setup
 
